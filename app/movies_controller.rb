@@ -70,6 +70,7 @@ end
 
 def can_update_using_update_method
   # Update movie title to "Wat, huh?"
+  # Update is like combining find and save!
   Movie.create(title: "Wat?")
   movie = Movie.find_by(title: "Wat?")
   movie.update(title: "Wat, huh?")
@@ -84,6 +85,7 @@ def can_update_multiple_items_at_once
 end
 
 def can_destroy_a_single_item
+  # so apparently destroy destroys persistent record...
   Movie.create(title: "That One Where the Guy Kicks Another Guy Once")
   movie = Movie.find_by(title: "That One Where the Guy Kicks Another Guy Once")
   movie.destroy
