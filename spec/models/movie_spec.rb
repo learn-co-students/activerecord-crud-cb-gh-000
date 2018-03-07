@@ -1,3 +1,4 @@
+  ActiveRecord::Migration.verbose = false
 describe 'Movie' do
   let(:attributes) {{
       title: "The Sting",
